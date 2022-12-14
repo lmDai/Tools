@@ -1,0 +1,24 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Project exclude paths
+/LocalRepo/ad_gdt_aar/build/
+/LocalRepo/ad_gdt_adapter_aar/build/
+/LocalRepo/ad_ks_aar/build/
+/LocalRepo/ad_mediation_aar/build/
+/LocalRepo/ad_open_aar/build/
+/LocalRepo/ad_pangle_adapter_aar/build/
+/LocalRepo/ad_test_aar/build/

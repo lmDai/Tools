@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('gdt_adapter_4.492.1362.1.aar'))

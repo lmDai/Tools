@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/LocalRepo" />
+            <option value="$PROJECT_DIR$/LocalRepo/ad_gdt_aar" />
+            <option value="$PROJECT_DIR$/LocalRepo/ad_gdt_adapter_aar" />
+            <option value="$PROJECT_DIR$/LocalRepo/ad_ks_aar" />
+            <option value="$PROJECT_DIR$/LocalRepo/ad_mediation_aar" />
+            <option value="$PROJECT_DIR$/LocalRepo/ad_open_aar" />
+            <option value="$PROJECT_DIR$/LocalRepo/ad_pangle_adapter_aar" />
+            <option value="$PROJECT_DIR$/LocalRepo/ad_test_aar" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/lib_common" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

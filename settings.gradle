@@ -1,0 +1,28 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        jcenter()
+        google()
+        mavenCentral()
+        maven { url 'https://www.jitpack.io' }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://www.jitpack.io' }
+    }
+}
+rootProject.name = "Tools"
+include ':app'
+include ':lib_common'
+include ':LocalRepo:ad_gdt_aar'
+include ':LocalRepo:ad_gdt_adapter_aar'
+include ':LocalRepo:ad_mediation_aar'
+include ':LocalRepo:ad_open_aar'
+include ':LocalRepo:ad_pangle_adapter_aar'
+include ':LocalRepo:ad_ks_aar'
+include ':LocalRepo:ad_test_aar'

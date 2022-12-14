@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('baiduMobAds_adapter_9.241.2.aar'))

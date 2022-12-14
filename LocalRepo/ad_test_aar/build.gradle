@@ -1,0 +1,4 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('mediation_test_tools_3.9.0.0.aar'))
+
+
