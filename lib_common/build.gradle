@@ -56,8 +56,17 @@ dependencies {
     api 'com.geyifeng.immersionbar:immersionbar:3.2.2'
     api 'com.geyifeng.immersionbar:immersionbar-ktx:3.2.2'
     api 'org.greenrobot:eventbus:3.2.0'
-    api 'com.alibaba:arouter-api:1.5.1'
-    kapt "com.alibaba:arouter-compiler:1.5.1"
+    api 'com.alibaba:arouter-api:1.5.2'
+    kapt "com.alibaba:arouter-compiler:1.5.2"
+    api 'com.github.zhpanvip:bannerviewpager:3.5.8'
+    api 'io.github.scwang90:refresh-layout-kernel:2.0.5'      //核心必须依赖
+    api 'io.github.scwang90:refresh-header-classics:2.0.5'    //经典刷新头
+    api 'io.github.scwang90:refresh-header-radar:2.0.5'       //雷达刷新头
+    api 'io.github.scwang90:refresh-header-falsify:2.0.5'     //虚拟刷新头
+    api 'io.github.scwang90:refresh-header-material:2.0.5'    //谷歌刷新头
+    api 'io.github.scwang90:refresh-header-two-level:2.0.5'   //二级刷新头
+    api 'io.github.scwang90:refresh-footer-ball:2.0.5'        //球脉冲加载
+    api 'io.github.scwang90:refresh-footer-classics:2.0.5'    //经典加载
     api 'io.coil-kt:coil:2.2.1'
     api 'io.coil-kt:coil-gif:2.2.1'
     api 'io.coil-kt:coil-svg:1.2.2'

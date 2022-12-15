@@ -20,6 +20,7 @@
             <option value="$PROJECT_DIR$/LocalRepo/ad_test_aar" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/lib_common" />
+            <option value="$PROJECT_DIR$/module_main" />
           </set>
         </option>
       </GradleProjectSettings>

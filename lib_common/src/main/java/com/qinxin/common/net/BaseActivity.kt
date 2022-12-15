@@ -42,9 +42,13 @@ abstract class BaseActivity<DB : ViewDataBinding?> : AppCompatActivity(), BaseVi
      * 页面状态管理
      */
     protected var mBaseLoadService: LoadService<*>? = null
+
+    @JvmField
     protected var mBinding: DB? = null
     protected var hasInit = false
-//    protected var mRouter = ARouter.getInstance()
+
+    @JvmField
+    protected var mRouter = ARouter.getInstance()
 
     /**
      * 状态栏沉浸
@@ -54,7 +58,7 @@ abstract class BaseActivity<DB : ViewDataBinding?> : AppCompatActivity(), BaseVi
         super.onCreate(savedInstanceState)
         mBinding = DataBindingUtil.setContentView(this, onBindLayout())
         EventBus.getDefault().register(this)
-//        mRouter.inject(this)
+        mRouter.inject(this)
         /*初始化沉浸式状态栏*/if (isStatusBarEnabled) {
             statusBarConfig.init()
         }
@@ -213,7 +217,7 @@ abstract class BaseActivity<DB : ViewDataBinding?> : AppCompatActivity(), BaseVi
     /**
      * 初始化沉浸式状态栏
      */
-    protected fun createStatusBarConfig(): ImmersionBar {
+    protected open fun createStatusBarConfig(): ImmersionBar {
         return ImmersionBar.with(this)
             .statusBarDarkFont(isStatusBarDarkFont) // 指定导航栏背景颜色
             .navigationBarColor(R.color.white) // 状态栏字体和导航栏内容自动变色，必须指定状态栏颜色和导航栏颜色才可以自动变色
