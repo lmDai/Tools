@@ -37,7 +37,7 @@ class MainActivity : BaseRefreshActivity<ActivityMainBinding, ToolsViewModel, Jo
         mViewPager = mBinding!!.banner as BannerViewPager<GirlBean>
         mViewPager.apply {
             adapter = GirlBannerAdapter()
-            setLifecycleRegistry(lifecycle)
+            registerLifecycleObserver(lifecycle)
         }.create()
     }
 

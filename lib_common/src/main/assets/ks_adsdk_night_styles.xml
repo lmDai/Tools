@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styles>
+  <!--入口组件夜间模式配置-->
+  <entryNightStyle>
+    <!--入口组件背景颜色-->
+    <backgroundColor>#FF19191E</backgroundColor>
+    <!--入口组件标题字体颜色-->
+    <entryTitleTextColor>#FFE6E6E6</entryTitleTextColor>
+    <!--入口组件点赞信息字体颜色-->
+    <likeInfoTextColor>#FFE6E6E6</likeInfoTextColor>
+    <!--入口组件视频描述字体颜色-->
+    <videoDescribeTextColor>#FF909092</videoDescribeTextColor>
+    <!--入口组件视频来源字体颜色-->
+    <videoFromTextColor>#FF909092</videoFromTextColor>
+  </entryNightStyle>
+
+  <!--热点组件夜间模式配置-->
+  <hotspotNightStyle>
+    <!--热点列表背景颜色-->
+    <backgroundColor>#E6191A1C</backgroundColor>
+    <!--热点排名字体颜色-->
+    <rankTextColor>#80FFFFFF</rankTextColor>
+    <!--热点标题字体颜色-->
+    <titleTextColor>#FFFFFFFF</titleTextColor>
+    <!--热点视频数量字体颜色-->
+    <videoCountTextColor>#99FFFFFF</videoCountTextColor>
+    <!--热点观看数量字体颜色-->
+    <viewCountTextColor>#99FFFFFF</viewCountTextColor>
+  </hotspotNightStyle>
+
+  <!--Feed流夜间模式配置-->
+  <feedNightStyle>
+    <!--单双Feed流Item背景颜色-->
+    <backgroundColor>#FF19191E</backgroundColor>
+    <!--单双Feed流Item作者名字字体颜色-->
+    <authorNameTextColor>#FF909092</authorNameTextColor>
+    <!--单双Feed流Item点赞信息字体颜色-->
+    <likeInfoTextColor>#FF9C9C9C</likeInfoTextColor>
+    <!--单双Feed流Item视频描述字体颜色-->
+    <videoDescribeTextColor>#FFE6E6E6</videoDescribeTextColor>
+  </feedNightStyle>
+</styles>

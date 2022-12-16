@@ -3,6 +3,7 @@ package com.qinxin.common
 import android.app.Application
 import android.content.Context
 import com.alibaba.android.arouter.launcher.ARouter
+import com.qinxin.common.ad.AdSdkInitUtil
 import com.qinxin.common.ad.GMAdManagerHolder
 import com.scwang.smart.refresh.footer.ClassicsFooter
 import com.scwang.smart.refresh.header.ClassicsHeader
@@ -22,6 +23,7 @@ class App : Application() {
         instance = this
         GMAdManagerHolder.init(this)
         ARouter.init(this)
+        AdSdkInitUtil.initSdk(this)
         initRefreshLayout()
     }
 

@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit
  * @Description : retrofit封装
  **/
 class RetrofitFactory {
-    private lateinit var retrofit: Retrofit
+    private var retrofit: Retrofit
 
     companion object {
         //单例

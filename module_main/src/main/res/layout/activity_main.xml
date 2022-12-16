@@ -60,7 +60,11 @@
                                 android:id="@+id/banner"
                                 android:layout_width="match_parent"
                                 android:layout_height="150dp"
+                                app:bvp_round_corner="@dimen/dp_10"
                                 android:layout_marginLeft="12dp"
+                                app:bvp_indicator_radius="@dimen/dp_4"
+                                app:bvp_indicator_normal_color="@color/cl_999999"
+                                app:bvp_indicator_checked_color="@color/theme_color"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginRight="12dp" />
 
