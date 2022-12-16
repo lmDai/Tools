@@ -5,7 +5,10 @@
       <map>
         <entry key="..\:/kotlin/Tools/app/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
         <entry key="..\:/kotlin/Tools/app/src/main/res/layout/item_banner.xml" value="0.24947916666666667" />
+        <entry key="..\:/kotlin/Tools/lib_common/src/main/res/drawable/collapsable_bg.xml" value="0.255" />
+        <entry key="..\:/kotlin/Tools/lib_common/src/main/res/drawable/normal_indicator.xml" value="0.255" />
         <entry key="..\:/kotlin/Tools/lib_common/src/main/res/drawable/search_view_bg.xml" value="0.2515" />
+        <entry key="..\:/kotlin/Tools/lib_common/src/main/res/drawable/selected_indicator.xml" value="0.255" />
         <entry key="..\:/kotlin/Tools/lib_common/src/main/res/drawable/tab_indicator_shape.xml" value="0.2515" />
         <entry key="..\:/kotlin/Tools/lib_common/src/main/res/layout/common_layout_commit.xml" value="0.24947916666666667" />
         <entry key="..\:/kotlin/Tools/lib_common/src/main/res/layout/common_layout_empty.xml" value="0.24947916666666667" />
@@ -16,7 +19,13 @@
         <entry key="..\:/kotlin/Tools/lib_common/src/main/res/layout/layout_stepper.xml" value="0.24947916666666667" />
         <entry key="..\:/kotlin/Tools/module_main/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
         <entry key="..\:/kotlin/Tools/module_main/src/main/res/layout/activity_splash.xml" value="0.24947916666666667" />
+        <entry key="..\:/kotlin/Tools/module_main/src/main/res/layout/fragment_news.xml" value="0.24947916666666667" />
         <entry key="..\:/kotlin/Tools/module_main/src/main/res/layout/home_top_view.xml" value="0.24947916666666667" />
+        <entry key="..\:/kotlin/Tools/module_main/src/main/res/layout/item_jokes.xml" value="0.24947916666666667" />
+        <entry key="..\:/kotlin/Tools/module_main/src/main/res/layout/item_news.xml" value="0.24947916666666667" />
+        <entry key="..\:/kotlin/Tools/module_main/src/main/res/layout/nine_memu_gridview.xml" value="0.2484375" />
+        <entry key="..\:/kotlin/Tools/module_main/src/main/res/layout/nine_memu_item.xml" value="0.24947916666666667" />
+        <entry key="..\:/kotlin/Tools/module_main/src/main/res/layout/nine_memu_main.xml" value="0.2484375" />
       </map>
     </option>
   </component>

@@ -10,91 +10,86 @@
         android:layout_height="match_parent"
         tools:context="com.qinxin.main.MainActivity">
 
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/searchLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cl_549cf8"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_isSticky="true">
+
+            <include layout="@layout/home_top_view" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
         <com.scwang.smart.refresh.layout.SmartRefreshLayout
             android:id="@+id/refreshView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchLinearLayout"
+            app:layout_constraintVertical_weight="1"
+            app:srlEnableLoadMore="false">
 
-            <com.qinxin.common.widget.consecutiveScroller.ConsecutiveScrollerLayout
+            <com.qinxin.common.widget.consecutiveScroller.CoordinatorScrollview
                 android:id="@+id/consecutiveScrollerLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:isPermanent="true">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/searchLinearLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/color_FE0F22"
-                    app:layout_isSticky="true">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                    <include layout="@layout/home_top_view" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/color_FE0F22">
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:id="@+id/collapsableContent"
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/collapsable_bg"
-                        android:orientation="vertical">
+                        android:background="@color/cl_549cf8">
 
-                        <com.zhpan.bannerview.BannerViewPager
-                            android:id="@+id/banner"
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/collapsableContent"
                             android:layout_width="match_parent"
-                            android:layout_height="150dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginRight="12dp" />
-
-                        <FrameLayout
-                            android:id="@+id/fragment_container"
-                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center_horizontal"
-                            app:layout_constraintHorizontal_weight="1"
-                            app:layout_constraintLeft_toLeftOf="@+id/banner"
-                            app:layout_constraintRight_toRightOf="@+id/banner"
-                            app:layout_constraintTop_toBottomOf="@+id/banner" />
+                            android:background="@drawable/collapsable_bg"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/tabMode"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Hello World!"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-                </RelativeLayout>
+                            <com.zhpan.bannerview.BannerViewPager
+                                android:id="@+id/banner"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="12dp" />
 
-                <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/tabLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/color_FAFAFA"
-                    app:layout_isSticky="true"
-                    app:tabIndicator="@drawable/tab_indicator_shape"
-                    app:tabIndicatorColor="@color/color_E33A3C"
-                    app:tabIndicatorHeight="2dp"
-                    app:tabMode="scrollable"
-                    app:tabRippleColor="@color/transparent"
-                    app:tabSelectedTextColor="@color/color_E33A3C"
-                    app:tabTextAppearance="@style/HomeTabLayoutTextStyle"
-                    app:tabTextColor="@color/color_404040" />
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/nine_menu_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp" />
 
-                <com.qinxin.common.widget.consecutiveScroller.ConsecutiveViewPager2
-                    android:id="@+id/viewPager"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                            <FrameLayout
+                                android:id="@+id/fragment_container"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center_horizontal"
+                                app:layout_constraintHorizontal_weight="1"
+                                app:layout_constraintLeft_toLeftOf="@+id/banner"
+                                app:layout_constraintRight_toRightOf="@+id/banner"
+                                app:layout_constraintTop_toBottomOf="@+id/banner" />
 
-            </com.qinxin.common.widget.consecutiveScroller.ConsecutiveScrollerLayout>
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </RelativeLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.qinxin.common.widget.consecutiveScroller.CoordinatorScrollview>
 
         </com.scwang.smart.refresh.layout.SmartRefreshLayout>
 

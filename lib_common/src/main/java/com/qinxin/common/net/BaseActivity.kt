@@ -108,7 +108,7 @@ abstract class BaseActivity<DB : ViewDataBinding?> : AppCompatActivity(), BaseVi
     /**
      * 显示出错状态页
      */
-    fun showErrorView() {
+    open fun showErrorView() {
         clearStatus()
         if (mBaseLoadService != null) {
             mBaseLoadService!!.showCallback(errorStatus!!.javaClass)
@@ -118,7 +118,7 @@ abstract class BaseActivity<DB : ViewDataBinding?> : AppCompatActivity(), BaseVi
     /**
      * 显示空状态页
      */
-    fun showEmptyView() {
+    open fun showEmptyView() {
         clearStatus()
         if (mBaseLoadService != null) {
             mBaseLoadService!!.showCallback(emptyStatus!!.javaClass)

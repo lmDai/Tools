@@ -2,6 +2,7 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -71,6 +72,7 @@ dependencies {
     api 'io.coil-kt:coil-gif:2.2.1'
     api 'io.coil-kt:coil-svg:1.2.2'
     api 'io.coil-kt:coil-video:2.2.1'
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.11'
     api project(path: ':LocalRepo:ad_gdt_aar')
     api project(path: ':LocalRepo:ad_gdt_adapter_aar')
     api project(path: ':LocalRepo:ad_mediation_aar')

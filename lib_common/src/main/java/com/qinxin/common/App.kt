@@ -4,6 +4,9 @@ import android.app.Application
 import android.content.Context
 import com.alibaba.android.arouter.launcher.ARouter
 import com.qinxin.common.ad.GMAdManagerHolder
+import com.scwang.smart.refresh.footer.ClassicsFooter
+import com.scwang.smart.refresh.header.ClassicsHeader
+import com.scwang.smart.refresh.layout.SmartRefreshLayout
 
 /**
  * @author dlm
@@ -19,6 +22,7 @@ class App : Application() {
         instance = this
         GMAdManagerHolder.init(this)
         ARouter.init(this)
+        initRefreshLayout()
     }
 
     override fun onTerminate() {
@@ -27,5 +31,14 @@ class App : Application() {
 
     companion object {
         var instance: App? = null
+    }
+
+    private fun initRefreshLayout() {
+        SmartRefreshLayout.setDefaultRefreshHeaderCreator { context, _ ->
+            ClassicsHeader(context)
+        }
+        SmartRefreshLayout.setDefaultRefreshFooterCreator { context, _ ->
+            ClassicsFooter(context).setFinishDuration(0)
+        }
     }
 }

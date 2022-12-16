@@ -5,12 +5,15 @@ import android.app.Application
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.qinxin.salarylife.esign.viewmodel.NewsListViewModel
 
 class ViewModelFactory private constructor(private val mApplication: Application) :
     ViewModelProvider.NewInstanceFactory() {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(ToolsViewModel::class.java)) {
             return ToolsViewModel(mApplication, ToolsModel(mApplication)) as T
+        } else if (modelClass.isAssignableFrom(NewsListViewModel::class.java)) {
+            return NewsListViewModel(mApplication, ToolsModel(mApplication)) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
     }

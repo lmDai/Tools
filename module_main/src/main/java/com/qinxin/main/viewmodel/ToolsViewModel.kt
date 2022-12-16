@@ -3,27 +3,34 @@ package com.qinxin.main.viewmodel
 import android.app.Application
 import com.qinxin.common.SingleLiveEvent
 import com.qinxin.common.bean.GirlBean
-import com.qinxin.common.net.BaseViewModel
+import com.qinxin.common.bean.JokesListBean
+import com.qinxin.common.net.BaseRefreshViewModel
+import com.qinxin.common.net.ResponseDTO
+
 
 class ToolsViewModel(
     application: Application,
     model: ToolsModel
-) : BaseViewModel<ToolsModel>(application, model) {
+) : BaseRefreshViewModel<ToolsModel, JokesListBean>(application, model) {
     private var mEnterMsgEvent: SingleLiveEvent<List<GirlBean>>? = null
     fun getmEnterMsgEvent(): SingleLiveEvent<List<GirlBean>> {
         return createLiveData(mEnterMsgEvent).also { mEnterMsgEvent = it }
     }
 
-
-    fun girlRandom() {
+    override fun onViewRefresh() {
         mModel.girlRandom()
-            .doOnSubscribe { showLoadingViewEvent?.call() }
-            .doFinally { clearStatusEvent?.call() }
-            .subscribe({ response ->
+            .doFinally { super.onViewRefresh() }
+            .doOnNext { response: ResponseDTO<List<GirlBean>> ->
                 getmEnterMsgEvent().value = response.data
-            }) { e: Throwable ->
+            }
+            .flatMap { mModel.jokesListRandom() }
+            .subscribe({ response: ResponseDTO<List<JokesListBean>> ->
+                clearStatusEvent?.call()
+                finishRefreshEvent.postValue(response.data)
+            }, { e: Throwable ->
                 showErrorViewEvent.call()
                 e.printStackTrace()
             }
+            )
     }
 }
