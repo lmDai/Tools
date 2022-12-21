@@ -33,10 +33,13 @@ class GridFragment(data: MutableList<MenuBean>, index: Int, pageSize: Int) :
     override fun initListener() {
         gridView.setOnItemClickListener { p0, p1, p2, p3 ->
             Log.i("single", nineGridAdapter.data[p2].menuName)
-            mRouter.build(RouterPaths.KS_ACTIVITY).navigation()
+            when (p2) {
+                0 -> mRouter.build(RouterPaths.KS_ACTIVITY).navigation()
+
+                1 -> mRouter.build(RouterPaths.NEWS_ACTIVITY).navigation()
+            }
         }
     }
-
     override fun initData() {
     }
 

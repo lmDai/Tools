@@ -13,5 +13,6 @@
             </intent-filter>
         </activity>
         <activity android:name="com.qinxin.main.MainActivity" />
+        <activity android:name="com.qinxin.main.NewsActivity" />
     </application>
 </manifest>

@@ -4,6 +4,7 @@ interface RouterPaths {
     companion object {
         const val SPLASH_ACTIVITY = "/module_main/splash"
         const val MAIN_ACTIVITY = "/module_main/main"
+        const val NEWS_ACTIVITY = "/module_main/news"
         const val KS_ACTIVITY = "/lib_common/ks"
     }
 }

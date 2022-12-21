@@ -6,7 +6,7 @@
         android:bottom="8dp"
         android:gravity="bottom|center_horizontal">
         <shape>
-            <solid android:color="@color/color_E33A3C" />
+            <solid android:color="@color/cl_549cf8" />
         </shape>
     </item>
 </layer-list>

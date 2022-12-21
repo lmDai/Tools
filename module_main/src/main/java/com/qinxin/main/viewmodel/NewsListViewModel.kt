@@ -1,4 +1,4 @@
-package com.qinxin.salarylife.esign.viewmodel
+package com.qinxin.main.viewmodel
 
 import android.app.Application
 import com.qinxin.common.bean.NewsListBean

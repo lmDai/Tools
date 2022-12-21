@@ -10,7 +10,7 @@ import com.qinxin.common.net.BaseRefreshFragment
 import com.qinxin.main.adapter.NewsListAdapter
 import com.qinxin.main.databinding.FragmentNewsBinding
 import com.qinxin.main.viewmodel.ViewModelFactory
-import com.qinxin.salarylife.esign.viewmodel.NewsListViewModel
+import com.qinxin.main.viewmodel.NewsListViewModel
 import kotlinx.android.synthetic.main.fragment_news.*
 
 class NewListFragment(var typeId: String?) :

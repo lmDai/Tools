@@ -219,7 +219,7 @@ class MainActivity : BaseRefreshActivity<ActivityMainBinding, ToolsViewModel, Jo
         mViewModel?.getmEnterMsgEvent()?.observe(this@MainActivity) { response ->
             kotlin.run {
                 mViewPager.refreshData(response)
-                mAdBannerManager!!.loadAdWithCallback(ThirdKeyConfig.GMAdConfig_UNIT_BANNER_ID_MINE)
+                mAdBannerManager!!.loadAdWithCallback(ThirdKeyConfig.GMAdConfig_UNIT_BANNER_ID_INDEX)
 
             }
         }

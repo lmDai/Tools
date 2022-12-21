@@ -6,6 +6,7 @@ import com.qinxin.common.bean.GirlBean
 import com.qinxin.common.bean.JokesListBean
 import com.qinxin.common.net.BaseRefreshViewModel
 import com.qinxin.common.net.ResponseDTO
+import java.util.concurrent.TimeUnit
 
 
 class ToolsViewModel(
@@ -23,6 +24,7 @@ class ToolsViewModel(
             .doOnNext { response: ResponseDTO<List<GirlBean>> ->
                 getmEnterMsgEvent().value = response.data
             }
+            .delay(5, TimeUnit.SECONDS, true)
             .flatMap { mModel.jokesListRandom() }
             .subscribe({ response: ResponseDTO<List<JokesListBean>> ->
                 clearStatusEvent?.call()
